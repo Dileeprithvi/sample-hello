@@ -16,11 +16,11 @@
 
   - name: building docker image
     command: docker build -t dileep95/firstdeploy:$BUILD_NUMBER .
-	  
-  - name: building docker image
+    
+  - name: docker login
     command: docker login -u dileep95 -p Docker@2019
 
-  - name: building docker image
+  - name: docker push
     command: docker push dileep95/firstdeploy:$BUILD_NUMBER		  
 
   - name: creating docker image
